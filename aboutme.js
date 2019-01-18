@@ -1,10 +1,10 @@
-var car = document.getElementById("car");
+var car = document.querySelector("#car");
 var xposcar = 0;
-var carInterval = setInterval(carWalk, 4000);
+var carInterval = setInterval(carWalk, 1000);
 
 
 function carWalk() {
-	if (xposcar >=-750){
+	if (xposcar >=-3040){
 	walkRight();
 } else {
 	carReset();
@@ -20,7 +20,7 @@ function carReset () {
 setInterval(carWalk, 3);
 
 function walkRight(){
-	xposcar += 25;
+	xposcar += 10;
     car.style.left = xposcar + "px";
     loop: true;
 };
